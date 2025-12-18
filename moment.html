@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moments</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: DarkSlateGrey;
+        color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 200px;
+        background-color: #1C1C26;
+        height: 100vh; /* full height */
+        padding-top: 20px;
+        position: fixed; /* stays on the left */
+        left: 0;
+        top: 0;
+        border-right: 2px solid #ccc;
+    }
+
+    .sidebar a {
+        display: block;
+        color: #FFFFFF;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .sidebar a:hover {
+        background-color: #ddd;
+    }
+
+    /* Main content */
+    .content {
+        margin-left: 220px; /* space so content is not covered by sidebar */
+        padding: 20px;
+    }
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Card size */
+.flip-card {
+    width: 280px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+/* Flip animation */
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back sides */
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* FRONT */
+.flip-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+/* Back (text side) */
+.flip-back {
+    background: #444;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+/* Optional color themes */
+.happy {
+    background: #3ba55d; /* green */
+}
+
+.sad {
+    background: #3a4a6a; /* blue-grey */
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- LEFT SIDEBAR -->
+<div class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="hobby.html">Hobby and Interest</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">My Family</a>
+    <a href="gallery.html">Gallery</a>
+
+    <a href="moment.html">Moments</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+    <h1 style="background-color:Tomato">Moments</h1>
+
+<div class="card-container">
+
+    <!-- HAPPY MOMENT CARD -->
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="flip-front happy">
+                <img src="raya.jpeg" alt="Happy Moment">
+                <h3>Family</h3>
+            </div>
+            <div class="flip-back">
+                <h3>Family</h3>
+                <p> Being with my family give me a enormous joy, seing them chatting together, laugthing somthing can bring me into tear</p>
+            </div>
+        </div>
+    </div>
+ <!-- HAPPY MOMENT CARD -->
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="flip-front happy">
+                <img src="grad.jpeg" alt="Happy Moment">
+                <h3>The end of School life</h3>
+            </div>
+            <div class="flip-back">
+                <h3>The end of School life</h3>
+                <p> Finishing the School life have a mix feeling as there is a feeling in me that are really happy but on the other hand there this sad feeling as i am leaving my school friends and the moment we have fun thoughtout the years of school.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- HAPPY MOMENT CARD -->
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="flip-front happy">
+                <img src="frien.jpeg" alt="Happy Moment">
+                <h3>Being with my friends </h3>
+            </div>
+            <div class="flip-back">
+                <h3>Being with my friends</h3>
+                <p>Being with my friends is something i really enjoy as i enjoy chatting with them and listening to intresting things they talk about, I just want to thanks all my friends that i have made true this day for being my friends.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SAD MOMENT CARD -->
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="flip-front sad">
+                <img src="grave.jpeg" alt="Sad Moment">
+                <h3>Leaving someone who is important in my life</h3>
+            </div>
+            <div class="flip-back">
+                <h3>Leaving someone who is important in my life</h3>
+                <p>In the year 2022 when i was in form 5 just before the midyear exam i have received the most heartbreaking news from my mother that my father have passed away at Sungai Buloh Hospital, After receiving the news i don't know how to feel and broke down in tears,the first week of the my father absent and the day it happen is the most hardest thing i have been in my life.</p>
+            </div>
+        </div>
+    </div>
+ <!-- SAD MOMENT CARD -->
+    <div class="flip-card">
+        <div class="flip-inner">
+            <div class="flip-front sad">
+                <img src="last.jpeg" alt="Sad Moment">
+                <h3>The last photo</h3>
+            </div>
+            <div class="flip-back">
+                <h3>The last photo.</h3>
+                <p> This picture was taking went my family was about to sent off my grandfather and grandmother to the KTM stesen and was waiting for the train to appear, while waiting my mother suggested taking a quick photo. This photo is very meaningful to me as this is the last photo with my father together before he was in a deep sleep in the hospital.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer style="
+    background-color: #32373D;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #ccc;
+    margin-top: 40px;
+">
+    <p>&copy; 2025 Isyraf. All rights reserved.</p>
+    <p>Recommended Browser: Microsoft Edge</p>
+    <p>Best Viewed Resolution: 1366 × 768 or higher</p>
+    <p>Last Updated: 18 Disember 2025</p>
+
+</footer>
+
+</body>
+</html>
