@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Biodata</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: DarkSlateGrey;
+        color: white;
+    }
+
+    .sidebar {
+        width: 200px;
+        background-color: #1C1C26;
+        height: 100vh; 
+        padding-top: 20px;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        border-right: 2px solid #ccc;
+    }
+
+    .sidebar a {
+        display: block;
+        color: #FFFFFF;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .sidebar a:hover {
+        background-color: #ddd;
+    }
+
+    /* Main content */
+    .content {
+        margin-left: 220px; 
+        padding: 20px;
+    }
+
+ .highlight {
+    border:4px solid red
+    
+    }
+
+
+.photo-box {
+    border: 4px solid white;
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+    display: flex;             
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-box img {
+    width: 220px;
+    border-radius: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="hobby.html">Hobby and Interest</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">My Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moment.html">Moments</a>
+</div>
+
+<div class="content">
+    <h1 style="background-color:Tomato">Biodata</h1>
+
+    <div style="display: flex; gap: 20px; align-items: center;">
+    
+    <div class="photo-box">
+        <img src="me.png" alt="My Photo">
+    </div>
+        <table border="1" cellpadding="10">
+            <tr><th>Name</th><td>Muhammad Isyraf Luqman Bin Mohd Kamal</td></tr>
+            <tr><th>Age</th><td>20</td></tr>
+            <tr><th>Date of Birth</th><td>12 July 2005</td></tr>
+            <tr><th>Gender</th><td>Male</td></tr>
+            <tr><th>Religion</th><td>Islam</td></tr>
+            <tr><th>Address</th><td class="highlight">Jalan Alam Suria 16/2, Puncak Alam, Selangor</td></tr>
+            <tr><th>Email Address</th><td class="highlight">Miluqman05@gmail.com</td></tr>
+            <tr><th>Phone Number</th><td class="highlight">01111414069</td></tr>
+        </table>
+    </div>
+</div>
+
+<footer style="
+    background-color: #32373D;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #ccc;
+    margin-top: 40px;
+">
+    <p>&copy; 2025 Isyraf. All rights reserved.</p>
+    <p>Recommended Browser: Microsoft Edge</p>
+    <p>Best Viewed Resolution: 1366 × 768 or higher</p>
+    <p>Last Updated: 18 Disember 2025</p>
+
+</footer>
+</body>
+</html>

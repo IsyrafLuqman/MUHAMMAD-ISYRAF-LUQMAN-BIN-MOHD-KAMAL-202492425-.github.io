@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Education</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: DarkSlateGrey;
+        color: white;
+    }
+
+   
+    .sidebar {
+        width: 200px;
+        background-color: #1C1C26;
+        height: 100vh; /* full height */
+        padding-top: 20px;
+        position: fixed; /* stays on the left */
+        left: 0;
+        top: 0;
+        border-right: 2px solid #ccc;
+    }
+
+    .sidebar a {
+        display: block;
+        color: #FFFFFF;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .sidebar a:hover {
+        background-color: #ddd;
+    }
+
+  
+    .content {
+        margin-left: 220px; /* space so content is not covered by sidebar */
+        padding: 20px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="hobby.html">Hobby and Interest</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">My Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moment.html">Moments</a>
+</div>
+
+<div class="content">
+    <h1 style="background-color:Tomato">Education</h1>
+<style>
+
+/* Scroll reveal base state */
+.education-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When visible */
+.education-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: DarkSlateGrey;
+    color: white;
+}
+
+.education-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 50px 20px;
+    flex-wrap: wrap; /* responsive */
+}
+
+.education-image-container {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden; /* important for zoom effect */
+    flex-shrink: 0;
+}
+
+.education-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* smooth zoom */
+}
+
+.education-image-container:hover img {
+    transform: scale(1.15);
+}
+
+.education-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.5;
+
+
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+    
+    .education-text p {
+    text-align: justify;
+}
+
+.education-section.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 800px) {
+    .education-section,
+    .education-section.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-image-container {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
+
+<!-- Block 1: Image Left -->
+<div class="education-section">
+    <div class="education-image-container">
+        <a href=https://www.facebook.com/skjalanrajasyedalwi/?locale=ms_MY>
+        <img src="syed.png" alt="School 1">
+    </a>
+    </div>
+
+    <div class="education-text">
+        <h2>Sekolah Kebangsaan Syed Alwi</h2>
+        <p>Before I started elementary school i have attended kindergarden where it is located just on the left of the school called Smart Reader Kids, After i have finished my kindergarden, i have enter first ever elementary school called Sk Syed Alwi where it is located just on the right of the kindergarden.I have attended the elementary school started from 2010 until 2014.</p>
+    </div>
+</div>
+
+<!-- Block 2: Image Right -->
+<div class="education-section reverse">
+    <div class="education-image-container">
+          <a href=https://www.facebook.com/skpa3/?locale=ms_MY>
+        <img src="sk.png" alt="College 1">
+    </a>
+    </div>
+
+    <div class="education-text">
+        <h2>Sekolah Kebangsaan Puncak Alam 3</h2>
+        <p>Suddenly in 2014 me and my family have move from perlis to Selangor, puncak alam because of my mother work where she was promoted to futher her teaching as a lecture from UiTM perlis to UiTM Puncak Alam as a accountant lecture, with that my father have decided to move as it also make easier for my father to get back home and be with us as my father only come back home on the weekend by riding buses from selangor to kangar where if is not the weekend my father would rest in a rental apparment. By moving to selangor it make easier for my mother and father to get to work and home, because we move i continue my elementary school at Sk Puncak Alam 3 until my UPSR. </p>
+    </div>
+</div>
+
+<!-- Block 3: Image Left -->
+<div class="education-section">
+    <div class="education-image-container">
+        <a href=https://www.facebook.com/SMKPA3.TS25/>
+        <img src="smk.png" alt="University 1">
+    </a>
+    </div>
+
+    <div class="education-text">
+        <h2>Sekolah Menengah Kebangsaan Puncak Alam 3</h2>
+        <p>After i have finished my Elementary school and have taking UPSR, i now move into secondary school called SMK Puncak Alam 3 where it is located just on the futher right of my previous school. Some fun fact, because of the distance between Sk Puncak Alam 3 and SMK Puncak Alam 3 is not far, the school filed for both of the school is share and if any event is taking place in the school field the school would taking turn on using the field.I continue to go to SMK Puncak Alam 3 until SPM and SMK Puncak Alam 3 is one of my last school before moving into University.   </p>
+    </div>
+</div>
+
+<!-- Block 4: Image Right -->
+<div class="education-section reverse">
+    <div class="education-image-container">
+        <a href=https://perak.uitm.edu.my/index.php/en/>
+        <img src="perak.png" alt="College 1">
+    </a>
+    </div>
+
+    <div class="education-text">
+        <h2>UiTM Seri Iskandar</h2>
+        <p>Before this i have put the Library Informatic Courses in UiTM kedah in my number one spot when doing the UPU because i am interested in the courses, unfortunately i did not passed as i don't my mathematic in my SPM is a D where it is required at least a C. Not hope is all lost as my mother have recommend me to enter pra-diploma. After thinking a couple of days,i have agree and preparing the document needed. After done preparing the document and i have successfully enter pra-diploma. I am taking my pra-diploma in UiTM Seri Iskandar located in Perak and this is where my first exposure to the University life.</p>
+    </div>
+</div>
+
+<!-- Block 5: Image Left -->
+<div class="education-section">
+    <div class="education-image-container">
+         <a href=https://kedah.uitm.edu.my/>
+        <img src="kedah.png" alt="School 1">
+    </a>
+    </div>
+
+    <div class="education-text">
+        <h2>UiTM Merbok</h2>
+        <p>After i have finished my pra-diploma i have now enter my diploma in UiTM Merbok, kedah taking Library Informatic courses until now where i am writing this sentences.</p>
+    </div>
+</div>
+
+<script>
+const sections = document.querySelectorAll('.education-section');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+</script>
+
+<button onclick="window.location.href='https://kedah.uitm.edu.my/';">
+UiTM Kedah Website</button> | 
+
+<button onclick="window.location.href='https://perak.uitm.edu.my/index.php/en/';">
+UiTM Perak Website</button> |
+
+<footer style="
+    background-color: #32373D;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #ccc;
+    margin-top: 40px;
+">
+    <p>&copy; 2025 Isyraf. All rights reserved.</p>
+    <p>Recommended Browser: Microsoft Edge</p>
+    <p>Best Viewed Resolution: 1366 × 768 or higher</p>
+    <p>Last Updated: 18 Disember 2025</p>
+
+</footer>
+
+</body>
+</html>

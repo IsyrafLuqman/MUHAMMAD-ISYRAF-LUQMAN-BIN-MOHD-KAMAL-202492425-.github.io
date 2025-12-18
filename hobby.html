@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hobby</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: DarkSlateGrey;
+        color: white;
+    }
+
+   
+    .sidebar {
+        width: 200px;
+        background-color: #1C1C26;
+        height: 100vh; 
+        padding-top: 20px;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        border-right: 2px solid #ccc;
+    }
+
+    .sidebar a {
+        display: block;
+        color: #FFFFFF;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .sidebar a:hover {
+        background-color: #ddd;
+    }
+
+   
+    .content {
+        margin-left: 220px; 
+        padding: 20px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="hobby.html">Hobby and Interest</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">My Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moment.html">Moments</a>
+</div>
+
+
+<div class="content">
+    <h1 style="background-color:Tomato">Hobby and Interest</h1>
+<style>
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: DarkSlateGrey;
+        color: white;
+    }
+
+    h1 {
+        text-align: left;
+        margin-top: 40px;
+    }
+
+    .hobby-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap; 
+        margin: 50px 20px;
+    }
+
+    .hobby-box {
+    width: 320px;
+    height: 250px;
+    background-color: #ffffff20;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.4s ease, background-color 0.4s ease, opacity 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    }
+
+    .hobby-box:hover {
+      background-color: #ffffff40;
+    }
+
+    .hobby-info {
+        opacity: 0;
+        transition: opacity 0.4s;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .hobby-box:hover .hobby-info {
+        opacity: 1;
+    }
+
+    
+    .hobby-video {
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        border-radius: 10px;
+        object-fit: cover;
+        display: block;
+    }
+
+    @media (max-width: 1000px) {
+        .hobby-container {
+            justify-content: center;
+        }
+    }
+</style>
+
+<h2> (Hover the mouse to the box) </h2>
+
+<div class="hobby-container">
+
+    <!-- HOBBY 1 -->
+    <div class="hobby-box">
+        <h2>Music</h2>
+        <div class="hobby-info">
+            Listening to music is one of my hobby espcially when doing work or just listening to it,The genre i listen the most is K-pop, J-pop and pop.
+        </div>
+        <video class="hobby-video" muted loop>
+            <source src="dohoon.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- HOBBY 2 -->
+    <div class="hobby-box">
+        <h2>Tokusatsu</h2>
+        <div class="hobby-info">
+            Tokusatsu is one of my favorite when i was a kid until now, it have element that make me really happy when watching it and awaken my inner child.
+        </div>
+        <video class="hobby-video" muted loop>
+            <source src="zeztz.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- HOBBY 3 -->
+    <div class="hobby-box">
+        <h2>Collecting</h2>
+        <div class="hobby-info">
+            	Collecting thing from my favorite shows, brand, or any thing that i like that have merchandise is a way i show support to it.
+        </div>
+        <video class="hobby-video" muted loop>
+            <source src="toy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- HOBBY 4 -->
+    <div class="hobby-box">
+        <h2>Games</h2>
+        <div class="hobby-info">
+            Playing game is one of the way i use my free time,I have and enjoy game from various type such as casual game, hard hard, team game and many more.
+        </div>
+        <video class="hobby-video" muted loop>
+            <source src="hollow.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- HOBBY 5 -->
+    <div class="hobby-box">
+        <h2>Dramas/Show/Animation</h2>
+        <div class="hobby-info">
+            Watching Drama/Show/Animation is also one of my hobby as watching it can let me learn somethig new and open a new perspectif in certain view.
+        </div>
+        <video class="hobby-video" muted loop>
+            <source src="anime.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</div>
+
+<script>
+const boxes = document.querySelectorAll('.hobby-box');
+
+boxes.forEach(box => {
+    const video = box.querySelector('.hobby-video');
+    let fadeInInterval, fadeOutInterval;
+
+    box.addEventListener('mouseenter', () => {
+        boxes.forEach(otherBox => {
+            const otherVideo = otherBox.querySelector('.hobby-video');
+            if (otherBox !== box) {
+                otherBox.style.transform = "scale(0.9)";
+                otherBox.style.opacity = "0.5";
+                otherVideo.pause();
+                otherVideo.currentTime = 0;
+                otherVideo.muted = true;
+            } else {
+                otherBox.style.transform = "scale(1.15)";
+                otherBox.style.opacity = "1";
+            }
+        });
+
+        // Play hovered video with audio
+        video.muted = false;
+        video.volume = 0;
+        video.play();
+
+        clearInterval(fadeInInterval);
+        fadeInInterval = setInterval(() => {
+            if (video.volume < 1) {
+                video.volume = Math.min(video.volume + 0.05, 1);
+            } else {
+                clearInterval(fadeInInterval);
+            }
+        }, 50);
+    });
+
+    box.addEventListener('mouseleave', () => {
+        boxes.forEach(otherBox => {
+            const otherVideo = otherBox.querySelector('.hobby-video');
+            otherBox.style.transform = "scale(1)";
+            otherBox.style.opacity = "1";
+        });
+
+        // Fade out audio
+        clearInterval(fadeOutInterval);
+        fadeOutInterval = setInterval(() => {
+            if (video.volume > 0) {
+                video.volume = Math.max(video.volume - 0.05, 0);
+            } else {
+                video.pause();
+                video.currentTime = 0;
+                video.muted = true;
+                clearInterval(fadeOutInterval);
+            }
+        }, 50);
+    });
+});
+</script>
+
+
+<footer style="
+    background-color: #32373D;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #ccc;
+    margin-top: 40px;
+">
+    <p>&copy; 2025 Isyraf. All rights reserved.</p>
+    <p>Recommended Browser: Microsoft Edge</p>
+    <p>Best Viewed Resolution: 1366 × 768 or higher</p>
+    <p>Last Updated: 18 Disember 2025</p>
+
+</footer>
+
+</body>
+</html>
+
+   

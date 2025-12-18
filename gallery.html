@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: DarkSlateGrey;
+        color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 200px;
+        background-color: #1C1C26;
+        height: 100vh; 
+        padding-top: 20px;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        border-right: 2px solid #ccc;
+    }
+
+    .sidebar a {
+        display: block;
+        color: #FFFFFF;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .sidebar a:hover {
+        background-color: #dddd;
+    }
+
+    /* Main content */
+    .content {
+        margin-left: 220px; 
+        padding: 20px;
+    }
+
+ body {
+        margin: 0;
+        background: #2F4F4F;
+        font-family: Arial;
+    }
+
+    .gallery-container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+   .main-image {
+    width: 80%;
+    height: 100%;
+    background-size: contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s ease;
+    background-color: #000;      
+     
+    }
+
+    /* RIGHT SIDEBAR */
+    .thumb-list {
+        width: 20%;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    /* THUMBNAILS */
+    .thumb {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: 0.2s;
+    }
+
+    .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .thumb:hover {
+        border: 2px solid #cfa500;
+        transform: scale(1.03);
+    }
+
+.fade {
+    animation: fadeEffect 0.5s ease;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- LEFT SIDEBAR -->
+<div class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="hobby.html">Hobby and Interest</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">My Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moment.html">Moments</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+    <h1 style="background-color:Tomato">Gallery</h1>
+    <div class="gallery-container">
+
+    <!-- MAIN IMAGE -->
+    <div class="main-image" id="mainImage"
+         style="background-image: url('img1.jpg');"></div>
+
+<!-- THUMBNAILS -->
+<div class="thumb-list">
+<div class="thumb" onclick="changeImage('blue.jpeg')">
+    <img src="blue.jpeg">
+</div>
+
+<div class="thumb" onclick="changeImage('family.jpeg')">
+    <img src="family.jpeg">
+</div>
+
+<div class="thumb" onclick="changeImage('yellow.jpeg')">
+    <img src="yellow.jpeg">
+</div>
+
+<div class="thumb" onclick="changeImage('pradc.jpeg')">
+    <img src="pradc.jpeg">
+</div>
+
+<div class="thumb" onclick="changeImage('red.jpeg')">
+    <img src="red.jpeg">
+</div>
+
+<div class="thumb" onclick="changeImage('smkc.jpeg')">
+    <img src="smkc.jpeg">
+</div>
+
+    </div>
+</div>
+
+<script>
+function changeImage(image) {
+    const main = document.getElementById("mainImage");
+
+    // Remove existing animation
+    main.classList.remove("fade");
+
+    // Change background image
+    main.style.backgroundImage = `url('${image}')`;
+
+    // Trigger fade animation (small delay forces restart)
+    setTimeout(() => {
+        main.classList.add("fade");
+    }, 10);
+}
+</script>
+
+<footer style="
+    background-color: #32373D;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #ccc;
+    margin-top: 40px;
+">
+    <p>&copy; 2025 Isyraf. All rights reserved.</p>
+    <p>Recommended Browser: Microsoft Edge</p>
+    <p>Best Viewed Resolution: 1366 × 768 or higher</p>
+    <p>Last Updated: 18 Disember 2025</p>
+
+</footer>
+
+</body>
+</html>
